@@ -23,11 +23,13 @@ const TodoList = () => {
         }}>
         添加
       </button>
+      <p>todoList</p>
       <ul>
         {todoList &&
           todoList.map((item: string, index: number) => (
             <li key={item} onClick={() => dispatch(delListAction(index))}>
               {item}
+              {' <--点击删除'}
             </li>
           ))}
       </ul>
